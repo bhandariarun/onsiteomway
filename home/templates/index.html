@@ -1,0 +1,26 @@
+<!-- templates/your_app/display_data.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sector Turnover</title>
+</head>
+<body>
+    <h1>Sector Turnover</h1>
+
+    <table border="1">
+        <tr>
+            <th>&nbsp;Sector&nbsp;</th>
+            <th>&nbsp;Turnovers&nbsp;</th>
+            <!-- Add other headers for your fields -->
+        </tr>
+        {% for item in data %}
+            <tr>
+                <td>{{ item.sector }}</td>
+                <td>{{ item.turnovers }}</td>
+                <!-- Add other fields as needed -->
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
