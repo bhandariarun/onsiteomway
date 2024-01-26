@@ -1,0 +1,36 @@
+<!-- templates/your_app/display_data.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top Looser</title>
+</head>
+<body>
+    <h1>Top Looser</h1>
+
+    <table border="1">
+        <tr>
+            <th>&nbsp;Symbol&nbsp;</th>
+            <th>&nbsp;LTPprice&nbsp;</th>
+            <th>&nbsp;PercentageChanges&nbsp;</th>
+            <th>&nbsp;Open&nbsp;</th>
+            <th>&nbsp;High&nbsp;</th>
+            <th>&nbsp;Low&nbsp;</th>
+            <th>&nbsp;Qty&nbsp;</th>
+            <!-- Add other headers for your fields -->
+        </tr>
+        {% for item in data %}
+            <tr>
+                <td>{{ item.Symbol }}</td>
+                <td>{{ item.LTPprice }}</td>
+                <td>{{ item.PerChanges }}</td>
+                <td>{{ item.Open }}</td>
+                <td>{{ item.High }}</td>
+                <td>{{ item.Low }}</td>
+                <td>{{ item.Qty }}</td>
+                <!-- Add other fields as needed -->
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
